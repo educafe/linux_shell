@@ -1,0 +1,10 @@
+RESET="\e[0m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLO="\e[33m"
+BLUE="\e[34m"
+PURPLE="\e[35m"
+CYAN="\e[36m"
+
+URED="\e[4;31m"
+UGREEN="\e[4;32m"
