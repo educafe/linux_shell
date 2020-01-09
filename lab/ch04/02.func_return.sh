@@ -1,6 +1,6 @@
 #!/bin/bash
 # using value to return a value.
-source $HOME/snippets/color
+source $HOME/lab/snippets/color
 
 function func1 {
 	echo "function func1() has been called"
