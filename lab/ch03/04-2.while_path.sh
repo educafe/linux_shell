@@ -1,15 +1,13 @@
-	
-	#!/bin/bash
-	#path information
+#!/bin/bash
+#path information
 
-	echo $PATH > file
-	while read entry
+echo $PATH > file
+while read entry
+do
+	IFS=:
+	for value in $entry
 	do
-		IFS=:
-		for value in $entry
-		do
-			echo $value
-		done
-	done < file
-	
-	
+		echo $value
+	done
+done < file
+

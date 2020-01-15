@@ -1,5 +1,4 @@
-	
-	#!/bin/bash
+#!/bin/bash
 
 	# echo The time and date are:
 	date
