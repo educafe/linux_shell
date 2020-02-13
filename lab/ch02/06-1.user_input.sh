@@ -15,3 +15,4 @@ echo "$surname, $name"
 read -s -p "Input password : " password
 echo $password
 
+read -sn1 -p "Press any key to continue : " 

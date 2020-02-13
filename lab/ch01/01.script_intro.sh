@@ -1,31 +1,23 @@
 #!/bin/bash
 
-	# echo The time and date are:
-	date
+# echo The time and date are:
+date
 
-	# echo "Let's see who's logged into the system:"
-	who
-	echo
-	#echo "hello world"
-	#printf 'hello world'
+# echo "Let's see who's logged into the system:"
+who
+echo
+#echo "hello world"
+#printf 'hello world'
 
-	echo 'hello world\n'
-	printf 'hello world\n'
-	echo
+echo 'hello world\n'
+printf 'hello world\n'
+echo
 
-	var=Hello
+printf "%-5s %-10s %-4s\n" No Name Mark
+printf "%-5s %-10s %-4.2f\n" 1 kosta 80.3456
+printf "%-5s %-10s %-4.2f\n" 2 kea 90.9989
+printf "%-5s %-10s %-4.2f\n" 3 ncia 77.564
 
-	echo "$var World"			# echo '$var World' will show different output
-	printf "$var World\n"
-	printf "%s World\n" $var
-	echo
-
-	where=Seoul
-	year=10
-	printf "I have lived in $where for $year years\n"
-	printf 'I have lived in %s for %d years\n' $where $year
-
-	printf '%-20d\t %10s\n' $year $where
 
 
 

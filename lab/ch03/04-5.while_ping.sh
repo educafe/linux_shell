@@ -1,22 +1,19 @@
 #!/bin/bash
 
-DATE=$(date +%y%m%d_%H%M)
+DATE="$(date +%y%m%d_%H%M)"
 SERVER_FILE=servers.txt
-
+if [[ ! -e "${SERVER_FILE}" ]]
+then
+  echo "Cannot open ${SERVER_FILE}." >&2
+  exit 1
+fi
 while read server
 do
-	ping -i 2 -c5 "$server" | \
-		while read result
-		do 
-			echo "$(date +%Y-%m-%d_%H%M%S): $result" >> /home/linux/lab/PingTest.$DATE 
-			# echo "$(date +%Y-%m-%d_%H%M%S): $result" | tee -a PingTest_$DATE.log 
-		done
-# done < $1
-done < /home/linux/lab/snippets/servers.txt
-
-# execute $ crontab -e 
-# Input as follow at the end of the file
-# 00 03 * * *	educafe /home/linux/lab/ch03/09.while_ping.sh
-
-# sudo service cron start
-
+	echo "Pinging ${server}"
+	ping -c5 "${server}" &> /dev/null
+	if [[ "${?}" -ne 0 ]]; then
+		echo "${server} down at [$(date +%T)]." >> DownServer.$DATE 
+	else
+		echo "${server} up." >> UpServer.$DATE 
+	fi
+done < $SERVER_FILE

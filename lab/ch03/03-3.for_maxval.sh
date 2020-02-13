@@ -4,7 +4,7 @@
 read -p "Input 5 numbers : " nums
 echo $nums
 #	set $nums
-echo $*
+# echo $*
 sum=0 max=0
 for val in $nums
 #	for val in $*

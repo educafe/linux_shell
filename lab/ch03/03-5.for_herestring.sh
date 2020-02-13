@@ -1,6 +1,6 @@
 #!/bin/bash
 #To sum up given 5 numbers and determine MAX numbers among 5 them
-string=$(cat ./dir/numbers)
+string=$(cat numbers)
 
 read nums <<< "$string"
 #echo ${nums[*]}

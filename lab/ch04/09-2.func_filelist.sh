@@ -1,8 +1,7 @@
 #!/bin/bash
 #File listing test
 
-function list_files
-{
+function list_files(){
 	for f in $1/*; do
 		if [[ -f $f ]]; then
 			echo "$f "
@@ -20,4 +19,3 @@ for file in $files
 do
 	echo $file
 done
-

@@ -3,10 +3,11 @@
 
 
 #Array variable
-array=(1 3 5 7 9)			#indexed array
-echo ${!array[@]}
-echo ${array[*]}
-
+myarr=(1 3 5 7 9)			#indexed array
+echo ${!myarr[@]}
+echo ${myarr[*]}
+echo ${myarr[1]} 
+unset myarr[1]
 
 declare -A url				#associative array : key-value, similar to python dictionary
 url[kosta]="edu2.kosta.co.kr"

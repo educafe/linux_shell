@@ -1,21 +1,15 @@
 #!/bin/bash
-var1="a+b+c"
-var2="d-e-f"
-var3="g,h,i"
-IFS=+
-echo $var1 					# a b c
-echo $var2 					# d-e-f
-echo $var3 					# g,h,i
+# String Selection
+var=$(grep educafe /etc/passwd)
+echo $var | cut -f1 -d':'
+echo $var | cut -f4 -d':'
 echo
+echo $(echo $var) | awk -F: '{print $1}'
+echo $(echo $var) | awk -F: '{print $4}'
 
-IFS="-"
-echo $var1 					# a+b+c
-echo $var2 					# d e f
-echo $var3 					# g,h,i
 echo
+echo $(getent passwd educafe) | awk -F: '{print $1}'
+hashedpw=$(sudo getent shadow educafe)
+salt=$(echo $hashedpw | cut -f 3 -d '$')
+echo "salt="$salt
 
-IFS=","
-echo $var1 					# a+b+c
-echo $var2 					# d-e-f
-echo $var3 					# g h i
-echo

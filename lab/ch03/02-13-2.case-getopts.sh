@@ -1,6 +1,8 @@
 #!/bin/bash
 USAGE="usage: $0 -x -y"
-while getopts :xy: opt_char
+while getopts xy: opt_char
+# while getopts :x:y opt_char
+# while getopts :x:y: opt_char
 do
 	case $opt_char in
 		x)

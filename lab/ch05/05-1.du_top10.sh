@@ -6,7 +6,7 @@ echo "========== Top 10 Disk Space Usage Monitoring ========"
 echo
 
 # CHECK_DIR=" /var/log /home"
-CHECK_DIR=dulist
+CHECK_DIR="dulist.txt"
 FILE=$(date +%y%m%d).rpt
 
 #Check the check directories exist
@@ -23,6 +23,7 @@ do
 	else
 		echo "$dirname does not exist!!!"
 		echo "continue to list next directory"
+		continue
 	fi
 	file_no=$[ $file_no + 1 ]
 	read dirname

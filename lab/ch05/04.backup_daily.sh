@@ -8,9 +8,7 @@ DEST_DIR=./backup
 FILE=$(date +%y%m%d).tar.gz
 DEST_FILE=$DEST_DIR/$FILE
 
-if [ -f $CONF_FILE ]; then
-	echo
-else
+if [ ! -f $CONF_FILE ]; then
 	echo "$CONF_FILE does not exist!!"
 	exit 1
 fi
@@ -33,7 +31,7 @@ file_no=0							#start on line-1 of config file
 while read filename <&3
 do
 	echo $filename
-	if [[ "$filename" = \#* ]] ; then
+	if [[ "$filename" =~ ^\#* ]] ; then
 #	if [[ ${filename:0:1} = \# ]] ; then
 		echo "$filename starts with #"
 		continue;
@@ -45,11 +43,15 @@ do
 		filelist+="$filename "
 		file_no=$[$file_no + 1]
 	else
-		echo "$filename, does not exist!!"
-		echo "continue to build backup list..."
+		echo "$filename, does not exist!! but continue to build backup list..."
 	fi
 done 3<$CONF_FILE
-echo ""; echo "backup file list : $filelist"
+echo ""; echo "backup file list : "
+
+for file in $filelist
+do
+	echo $file
+done
 
 # To tar files and compress
 sudo tar -czf $DEST_FILE $filelist 2> err.log

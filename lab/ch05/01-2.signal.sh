@@ -4,12 +4,11 @@
 TIMER_INTERRUPT=14
 TIMELIMIT=5 # Three seconds in this instance.
 # May be set to different value.
-PrintAnswer()
-{
+PrintAnswer(){
 	if [ "$answer" = TIMEOUT ]
 	then
 		echo $answer
-		else 			# Don't want to mix up the two instances.
+	else 			# Don't want to mix up the two instances.
 		echo "Your favorite veggie is $answer"
 		kill $! 		# Kills no-longer-needed TimerOn function
 						#+ running in background.
