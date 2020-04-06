@@ -10,7 +10,7 @@ fi
 while read server
 do
 	echo "Pinging ${server}"
-	ping -c5 "${server}" &> /dev/null
+	./myping $server  &> /dev/null
 	if [[ "${?}" -ne 0 ]]; then
 		echo "${server} down at [$(date +%T)]." >> DownServer.$DATE 
 	else

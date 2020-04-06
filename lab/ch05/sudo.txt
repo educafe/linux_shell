@@ -1,0 +1,1 @@
+educafe ALL=(ALL)       /bin/cat,       NOPASSWD:/bin/mkdir, /bin/rmdir

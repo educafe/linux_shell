@@ -5,7 +5,7 @@ echo "== Delete Many New User Account =="
 
 input="userlist"
 
-while IFS=':' read -r userid name
+while IFS=':' read -r userid name email phone
 do
 	echo "delete user : $userid($name)"
 	sudo deluser $userid --remove-home
