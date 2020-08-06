@@ -3,13 +3,14 @@
 
 exec > log
 exec 2> err
-# exec &> log
 grep educafe /etc/passwd
 echo
 ls -l ~/lab
 echo
 
 ls -l /bin/usr
+exec >&-
+exec 2>&-
 
 file="file01.txt"
 echo $(cat $file)

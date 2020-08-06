@@ -5,18 +5,21 @@ if [ -z $uname ]; then
 	echo "Please input username to login"
 	exit 100;
 fi
-prompt="Enter Password : "
 
-while read -p "$prompt" -r -s -n 1 char
+echo -n "Enter Password : "
+
+while read -r -s -n 1 char
 do
 	if [ -z $char ]; then			
 		break
 	elif [[ $char == $'\177' ]];  then
-		prompt=$'\b \b'
-		password="${password%?}"
+		if [ ${#password} -ne 0 ]; then
+			printf $'\b \b'
+			password="${password%?}"
+		fi
 	else
-		prompt='*'
-		password+="$char"
+		printf '*'
+		password+=$char
 	fi
 done
 echo

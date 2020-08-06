@@ -8,6 +8,6 @@ input="userlist"
 while IFS=':' read -r userid name email phone
 do
 	echo "delete user : $userid($name)"
-	sudo deluser $userid --remove-home
+	sudo userdel -r $userid 
 done < "$input"
 exit 0

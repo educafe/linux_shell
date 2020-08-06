@@ -16,7 +16,7 @@ echo -e $RED"Add a user to samba"$RESET
 echo
 echo -e $BLUE"sudo smbpasswd -a educafe"$RESET
 echo
-smbpasswd -a educafe
+echo -ne "ubuntu\nubuntu" | sudo smbpasswd -a -s educafe
 echo
 echo -e $RED"Change samba configuration on /etc/samba/smb.conf"$RESET
 echo

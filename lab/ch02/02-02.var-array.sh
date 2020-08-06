@@ -10,9 +10,9 @@ echo ${myarr[1]}
 unset myarr[1]
 
 declare -A url				#associative array : key-value, similar to python dictionary
-url[kosta]="edu2.kosta.co.kr"
+url[kosta]="edu.kosta.co.kr"
 url[kea]="educ.or.kr"
-url[google]="www.google.com"
+url[ncia]="edu.ncia.kr"
 #echo ${!url[*]}
 printf "%-20s %-20s %-20s\n" ${!url[*]}
 printf "%-20s %-20s %-20s\n" ${url[*]}

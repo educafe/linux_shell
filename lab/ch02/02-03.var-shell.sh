@@ -2,12 +2,14 @@
 #shell built-in variable
 
 # Assign a value to System variable
-echo "Current path = " $PATH
-echo "Current Working Directory = " $PWD
-echo "BashID = " $BASHPID
+echo "PATH = "$PATH
+echo "PWD = "$PWD
+${BashPID:=$BASHPID}
+ps ax | grep $BashPID | head -1
+# echo "Current Process Name = " $( ps -p $$ | awk '{ print $4 }' )
+ps -p $$ 
+echo -n "The real shell is : "
+realpath /proc/$$/exe
 PATH=$PWD:$PATH
-echo ${BASH_SOURCE}
-echo ${LINENO}
-echo ${FUNCNAME[0]}
-  
+
 echo "[$0] vs. [${BASH_SOURCE[0]}]"

@@ -25,3 +25,5 @@ done
 
 #Unnamed pipe forks the second command as a child process and
 #provides communication channel from previous command (parent process) to child (following process)
+
+# diff <(ls /bin) <(ls /usr/bin)

@@ -1,1 +1,4 @@
-educafe ALL=(ALL)       /bin/cat,       NOPASSWD:/bin/mkdir, /bin/rmdir
+educafe ALL=(ALL:ALL)\
+ALL,\
+NOPASSWD: /usr/sbin/useradd, /usr/sbin/userdel, /usr/sbin/chpasswd, /bin/tar
+
