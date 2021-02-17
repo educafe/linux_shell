@@ -1,1 +1,0 @@
-All the codes are placed chapter-wise in the respective folder.

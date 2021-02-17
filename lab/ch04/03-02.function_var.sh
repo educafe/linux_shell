@@ -1,6 +1,6 @@
 #!/bin/bash
 
-my_function() {
+my_function {
     local GLOBAL_VAR=1
 }
 

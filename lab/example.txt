@@ -13,3 +13,5 @@ cducafe
 (010)-2222-3333
 010-2222-3333
 123456789
+
+ wget http://raw.githubusercontent.com/educafe/linux_shell/master/example.txt

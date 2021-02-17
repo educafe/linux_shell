@@ -1,10 +1,8 @@
 #!/bin/bash
-#signals that are ignored by default in shell script
-source $HOME/lab/snippets/color
 
 function signal_handler {
-	# echo $1
-	echo -e $RED"Signal $1 trapped"$RESET
+	tput setaf 1
+	echo "Signal $1 trapped"
 	echo $$ $BASHPID
 }
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 #Directory Listing test
+shopt -s dotglob		# include file or directory starting with . , ex; .local	
+
 read -p "Input Directory Path : " path
 if [ $path = '/' ]; then
 	for dir in $(echo /*); do

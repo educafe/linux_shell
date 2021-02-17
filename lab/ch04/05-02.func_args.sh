@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function hello() {
+function hello {
 	args="$@"
 	set args
     echo $[$1 + $2 + $3 + $4]

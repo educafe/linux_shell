@@ -2,10 +2,10 @@
 
 function myadd {
 	if [ $# -lt 2 ]; then
-		echo "Usage : $FUNCNAME <num1> <num2>" >&2
+		echo "Usage : $FUNCNAME <num1> <num2> [num3]..." >&2
 		return 100
 	fi 
-	echo "$[ $1 + $2 ]"
+	echo $[ $1 + $2 ]
 }
 
 export -f myadd

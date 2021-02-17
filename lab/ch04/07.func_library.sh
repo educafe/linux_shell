@@ -1,6 +1,5 @@
 #!/bin/bash
 # using functions defined in a library file
-source $HOME/lab/snippets/color
 
 #reference library
 . ./myfuncs
@@ -16,8 +15,12 @@ result2=$(mysub $num1 $num2)
 result3=$(mymul $num1 $num2)
 result4=$(mydiv $num1 $num2)
 
-echo -e $RED"Add $num1 + $num2 : $result1"$RESET
-echo -e $BLUE"Substract $num1 - $num2 : $result2"$RESET
-echo -e $GREEN"Multiply $num1 * $num2 : $result3"$RESET
-echo -e $PURPLE"Divide $num1 / $num2 : $result4"$RESET
+tput setaf 1
+echo "Add $num1 + $num2 : $result1"
+tput setaf 2
+echo "Substract $num1 - $num2 : $result2"
+tput setaf 3
+echo "Multiply $num1 * $num2 : $result3"
+tput setaf 4
+echo "Divide $num1 / $num2 : $result4"
 

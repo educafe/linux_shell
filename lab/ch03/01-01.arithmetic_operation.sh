@@ -10,7 +10,6 @@ echo "Sub = $(expr $num1 - $num2)"
 echo "Mul = $(expr $num1 \* $num2)"
 
 echo "Div = $(expr $num1 / $num2)"
-echo "Div = $div"
 
 echo "Modulo = $(expr $num1 % $num2)"
 

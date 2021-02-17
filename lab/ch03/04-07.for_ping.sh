@@ -30,4 +30,4 @@ do
   }
 done
 
-exit $RETURN_CODE
+return $RETURN_CODE

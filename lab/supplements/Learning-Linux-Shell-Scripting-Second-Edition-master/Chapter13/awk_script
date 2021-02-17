@@ -1,6 +1,0 @@
-BEGIN {
-do {
-++x
-print x
-} while ( x <= 4 )
-}

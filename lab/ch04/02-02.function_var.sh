@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function my_function() {
+function my_function {
     echo "$GLOBAL_VAR"
 }
 

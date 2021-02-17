@@ -1,7 +1,7 @@
 #!/bin/bash
 #File listing test
 
-function dir_lists(){
+function dir_lists {
 	for d in $1/*; do
 		if [[ -d $d ]]; then
 			echo "$d "

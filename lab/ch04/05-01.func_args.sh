@@ -1,12 +1,12 @@
 #!/bin/bash
 
-function hello() {
+function hello {
     echo "Hello $1"
 }
 
 hello kosta
 
-function hello() {
+function hello {
 	args="$@"
     for NAME in $args
     do
