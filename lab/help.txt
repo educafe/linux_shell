@@ -1,0 +1,5 @@
+echo "${PATH//:/$'\n'}"
+
+awk '{split($0, arr, ":"); for (var in arr) print arr[var]}' <<< $PATH
+
+sed s/:/'\n'/g <<< $PATH
